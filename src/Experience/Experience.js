@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
 import { Camera, Debug, Helpers, Lights, Renderer, Sizes, Time } from './init';
 import { World } from './World';
+import { resolvePublicPath } from '../utils';
 
 export class Experience {
   constructor(_canvas) {
@@ -24,7 +25,7 @@ export class Experience {
     const pmremGenerator = new THREE.PMREMGenerator(this.renderer.instance);
     pmremGenerator.compileEquirectangularShader();
     const rgbeLoader = new EXRLoader();
-    rgbeLoader.load('/hdr-image.exr', (texture) => {
+    rgbeLoader.load(resolvePublicPath('/hdr-image.exr'), (texture) => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       texture.encoding = THREE.LinearEncoding;
 

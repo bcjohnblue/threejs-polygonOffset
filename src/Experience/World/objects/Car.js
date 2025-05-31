@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { resolvePublicPath } from '../../../utils';
 
 export class Car {
   constructor(experience, options = {}) {
@@ -117,7 +118,7 @@ export class Car {
 
   createLogo() {
     const loader = new THREE.TextureLoader();
-    loader.load('/logo.png', (texture) => {
+    loader.load(resolvePublicPath('/logo.png'), (texture) => {
       const logoGeometry = new THREE.CircleGeometry(0.3, 32);
       const logoMaterial = new THREE.MeshPhongMaterial({
         map: texture,
