@@ -1,22 +1,3 @@
-# Three.js template
+# Demo - Three.js polygonOffset
 
-#### [Online demo](https://codesandbox.io/p/devbox/github/bcjohnblue/threejs-template/tree/main/)
-
-## Techs
-
-- [threejs (v0.171.0)](https://threejs.org/)
-- [vite](https://cn.vitejs.dev/guide/)
-- [lil-gui](https://lil-gui.georgealways.com/)
-
-## Setup
-
-```bash
-# Install dependencies
-yarn install
-
-# Run local server
-yarn run dev
-
-# Build production
-yarn run build
-```
+This repo is a demo for the article [Three.js 中物體的遠近關係 (7) - 使用 polygonOffset 動態改變深度值](https://www.blog.bcjohn.com/2025/05/29/three-js-中物體的遠近關係-7-使用-polygonoffset-動態改變深度值/)
